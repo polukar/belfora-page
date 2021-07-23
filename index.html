@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Главная :: Frontend pack</title>
+    <!--
+    link(rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png")
+    link(rel="manifest" href="assets/site.webmanifest")
+    link(rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#ffffff")
+    link(rel="shortcut icon" href="assets/favicon.ico")
+    meta(name="msapplication-TileColor" content="#ffffff")
+    meta(name="msapplication-config" content="assets/browserconfig.xml")
+    meta(name="theme-color" content="#ffffff")
+    
+    -->
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="twitter:title" content="title">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <meta property="og:image" content="assets/share.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oranienbaum&amp;family=PT+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  </head>
+  <body class="body">
+    <div class="header">
+      <div class="container">
+        <div class="header__wrap"> 
+          <div class="mobile-search"> 
+            <div class="search">
+              <button class="circle__button search__btn">
+                    <svg class="svgsprite _search">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#search"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+          <nav class="nav header__nav"><a class="nav__link" href="catalog.html">Каталог</a><a class="nav__link" href="reports.html">Отзывы</a><a class="nav__link" href="pay.html">Доставка и оплата</a></nav>
+          <div class="header__logo"><img src="./assets/img/logo.svg" alt=""></div>
+          <div class="header__info">
+            <div class="work-time">Принимаем заказы 24/7</div>
+            <div class="header__buttons">
+              <button class="circle__button circle__button--phone -js-fadeintooltip">
+                    <svg class="svgsprite _phone">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#phone"></use>
+                    </svg>
+                <div class="tooltip --mright">
+                  <div class="contact contact--margin">
+                    <p class="text-title">+ 7 (924) 240-90-74</p><a class="grey-description" href="#">Заказать звонок </a>
+                  </div>
+                  <div class="contact contact--margin">
+                    <p class="text-title">Проспект славы, 86</p>
+                    <div class="grey-description" href="#">с 8 до 20:00, без выходных</div>
+                  </div><a class="contact contact--social">
+                    <div class="circle__button circle__button--inst --black">
+                          <svg class="svgsprite _inst">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#inst"></use>
+                          </svg>
+                    </div>
+                    <p class="text-title">Instagram</p></a>
+                </div>
+              </button><a class="circle__button" href="#">
+                    <svg class="svgsprite _heart">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#heart"></use>
+                    </svg></a>
+              <button class="circle__button -js-fadeinbasket" href="#">
+                    <svg class="svgsprite _basket">
+                      <use xlink:href="assets/img/sprites/svgsprites.svg#basket"></use>
+                    </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+    </div>
+    <footer class="footer"></footer>
+    <div class="basket">
+      <div class="basket__bg -js-closebasket"></div>
+      <form class="basket__wrap">
+        <div class="basket__top">
+          <div class="basket__header">
+            <h2>Ваша корзина</h2>
+            <button class="basket__close -js-fadeoutbasket">
+                  <svg class="svgsprite _close">
+                    <use xlink:href="assets/img/sprites/svgsprites.svg#close"></use>
+                  </svg>
+            </button>
+          </div>
+          <div class="basket__body"> 
+                <div class="basket-cart">
+                  <div class="basket__left">
+                    <div class="basket-cart__pic"> <img src="./assets/img/carts/6.png"></div>
+                    <div class="basket-cart__info">
+                      <h5 class="basket-cart__title">Букет из кустовой хризантемы и кустовой розы</h5>
+                      <p class="text-grey basket-cart__text">51 штука</p>
+                      <div class="basket-cart__amount">
+                            <div class="counter"> 
+                              <div class="counter__minus">
+                                    <svg class="svgsprite _minus">
+                                      <use xlink:href="assets/img/sprites/svgsprites.svg#minus"></use>
+                                    </svg>
+                              </div>
+                              <input class="counter__input" type="text" disabled value="1">
+                              <div class="counter__plus">
+                                    <svg class="svgsprite _plus">
+                                      <use xlink:href="assets/img/sprites/svgsprites.svg#plus"></use>
+                                    </svg>
+                              </div>
+                            </div>
+                        <div class="basket-cart__summ summ">2 358 руб.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="basket__right">
+                    <div class="basket-cart__close">
+                          <svg class="svgsprite _close-small">
+                            <use xlink:href="assets/img/sprites/svgsprites.svg#close-small"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div class="basket__bottom">  
+          <div class="basket__set"> 
+            <p>Добавить набор для продления жизни сразенных цветов?</p>
+            <div class="basket__radios">
+              <label class="basket__radio">
+                <input class="hidden" type="radio" name="set" checked>
+                <div class="basket__radio-button">Да</div>
+              </label>
+              <label class="basket__radio">
+                <input class="hidden" type="radio" name="set">
+                <div class="basket__radio-button">Нет</div>
+              </label>
+            </div>
+          </div>
+          <div class="basket__bottom-wrap">
+            <div class="basket__price price"> 
+              <div class="price-wrap">
+                <div class="prce__item"> 
+                  <h5>Стоимость </h5>
+                  <div class="price__number summ"> 7 212 руб.</div>
+                </div>
+              </div>
+              <div class="price-wrap">
+                <div class="prce__item"> 
+                  <h5>Cкидка </h5>
+                  <div class="price__number summ"> 0 руб.</div>
+                </div>
+              </div>
+            </div>
+            <div class="basket__buttons"> <a class="basket__button button --dark --big" href="#">Оформить заказ</a>
+              <button class="basket__button basket__button--close button --white --big -js-fadeoutbasket">Продолжить покупки</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
+    <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+  </body>
+</html>
