@@ -1231,7 +1231,7 @@ h5 {
 }
 
 .circle__button:hover {
-  background-color: #F0F0F1;
+  background-color: #EBEBEC;
 }
 
 .circle__button.--black {
@@ -1268,12 +1268,12 @@ h5 {
 }
 
 .button.--dark:hover {
-  background-color: #292223;
+  background-color: #221E1E;
 }
 
 .button.--white {
   background-color: transparent;
-  border-color: #646464;
+  border-color: #E4E7EF;
   border-width: 1px;
   border-style: solid;
 }
@@ -1288,7 +1288,7 @@ h5 {
 }
 
 .button.--grey:hover {
-  background-color: #292223;
+  background-color: #949AAA;
 }
 
 .button.--lightgrey {
@@ -1381,6 +1381,17 @@ footer {
 
 .footer__link {
   margin-bottom: 17px;
+}
+
+.footer__link .link {
+  font-weight: normal;
+  border-bottom: 1px solid transparent;
+  transition: border .4s;
+}
+
+.footer__link .link:hover {
+  color: #292223;
+  border-bottom-color: #292223;
 }
 
 .footer__link:last-child {
@@ -1542,9 +1553,9 @@ footer {
   position: fixed;
   z-index: 2000;
   left: 0;
-  top: 75px;
+  top: 54px;
   width: 100%;
-  height: calc(100% - 140px);
+  height: calc(100% - 119px);
   background-color: #fff;
   padding-left: 25px;
   padding-right: 25px;
@@ -1607,6 +1618,34 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.feature__number {
+  position: absolute;
+  right: 9px;
+  bottom: 12px;
+  border-radius: 50%;
+  background-color: #F15938;
+  width: 19px;
+  height: 19px;
+  font-size: 12px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle__button--phone .tooltip:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 24px;
+}
+
+.circle__button--phone:hover .tooltip {
+  display: block;
 }
 
 .tooltip {
@@ -1820,7 +1859,7 @@ footer {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid #646464;
+  border: 1px solid #E4E7EF;
   transition: border-color .4s;
   cursor: pointer;
 }
@@ -1863,7 +1902,7 @@ footer {
 }
 
 .basket__radio-button:hover {
-  background-color: #F0F0F1;
+  background-color: #EBEBEC;
 }
 
 .basket__radio input:checked + .basket__radio-button {
@@ -2434,15 +2473,24 @@ footer {
   margin-bottom: 40px;
 }
 
+.cart:hover .cart__pic .cart__pic-img {
+  transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.15);
+}
+
 .cart__top {
   position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.cart__top:hover .cart__buttons {
+  transform: translateX(-50%) translateY(0);
 }
 
 .cart__pic {
   height: 320px;
   overflow: hidden;
   border-radius: 10px;
-  margin-bottom: 18px;
   position: relative;
   cursor: pointer;
   background-color: #F7F7F7;
@@ -2455,36 +2503,30 @@ footer {
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-  transition: transform .4s;
-}
-
-.cart__pic:hover .cart__pic-img {
-  transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.1);
-}
-
-.cart__pic-img .cart__pic.active {
-  transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.1);
+  transition: transform 1.5s;
 }
 
 .tags {
-  display: flex;
+  display: block;
   position: absolute;
   left: 22px;
   top: 22px;
+  max-width: 120px;
 }
 
 .tag {
-  margin-right: 14px;
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 28px;
   padding: 0 10px;
   height: 30px;
   border-radius: 4px;
   color: #fff;
+  display: inline-flex;
 }
 
 .tag:last-child {
-  margin-right: 0px;
+  margin-bottom: 0px;
 }
 
 .tag.--green {
@@ -2505,7 +2547,7 @@ footer {
   justify-content: center;
   position: absolute;
   right: 22px;
-  bottom: 22px;
+  top: 25px;
 }
 
 .cart__like .svgsprite._heart-full {
@@ -2527,11 +2569,13 @@ footer {
 .cart__buttons {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateY(100%);
   bottom: 35px;
+  padding-bottom: 35px;
+  bottom: 0;
   width: 100%;
   max-width: 200px;
-  display: none;
+  transition: .4s;
 }
 
 .cart__buttons .button {
@@ -2582,7 +2626,7 @@ footer {
   height: 100%;
   z-index: 1;
   transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-  transition: transform .4s;
+  transition: transform 1.5s;
 }
 
 .catalog__item:hover .catalog__bg {
@@ -2785,6 +2829,30 @@ footer {
 .form__block {
   margin-bottom: 18px;
   position: relative;
+}
+
+.block--error .form__error {
+  display: block;
+}
+
+.block--error .form__input {
+  border-color: #F55174;
+}
+
+.block--error .form__input:hover {
+  border-color: #F55174;
+}
+
+.block--succes .form__input {
+  border-color: #55CF4A;
+}
+
+.block--succes .form__input:hover {
+  border-color: #55CF4A;
+}
+
+.block--succes .form__error {
+  display: none;
 }
 
 .form__error {
@@ -3191,6 +3259,32 @@ footer {
 
 .product__title {
   text-align: left;
+}
+
+.product__like {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #F1F1F1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product__like .svgsprite._heart-full {
+  fill: #D8D8D8;
+  transform: translateY(2px);
+  transition: .4s;
+}
+
+.product__like:hover,
+.product__like.active {
+  background-color: #FFE2E8;
+}
+
+.product__like:hover .svgsprite._heart-full,
+.product__like.active .svgsprite._heart-full {
+  fill: #F76785;
 }
 
 .status {
@@ -3723,12 +3817,12 @@ footer {
   }
 
   .cart__pic {
-    height: 265px;
+    height: 290px;
   }
 
   .tag {
     font-size: 14px;
-    margin-right: 5px;
+    margin-bottom: 4px;
   }
 
   .main-slide {
@@ -3892,7 +3986,8 @@ footer {
     margin-right: 25px;
   }
 
-  .basket__number {
+  .basket__number,
+  .feature__number {
     right: 9px;
     bottom: 9px;
     width: 16px;
@@ -4163,7 +4258,7 @@ footer {
 @media (max-width: 768px) {
   .body {
     padding-bottom: 65px;
-    padding-top: 75px;
+    padding-top: 54px;
   }
 
   h1 {
@@ -4358,12 +4453,17 @@ footer {
     left: 0;
     background-color: #E8EBF3;
     z-index: 10;
+    opacity: 0;
+  }
+
+  .search-main.active .search-main:after {
+    opacity: 1;
   }
 
   .search__close {
     opacity: 1;
     top: 100%;
-    margin-top: 46px;
+    margin-top: 36px;
     right: auto;
     left: calc(100vw - 80px);
     display: none;
@@ -4385,7 +4485,8 @@ footer {
     box-shadow: 0px 13px 10px rgba(56, 40, 43, 0.08);
     border-radius: 0px 0px 6px 6px;
     padding-left: 25px;
-    margin-top: 18px;
+    margin-top: 7px;
+    padding-right: 60px;
   }
 
   .search-main.active .search__input {
@@ -4394,7 +4495,7 @@ footer {
   }
 
   .header__wrap {
-    height: 75px;
+    height: 54px;
   }
 
   .header__logo {
@@ -4470,8 +4571,8 @@ footer {
   }
 
   .basket {
-    height: calc(100% - 75px);
-    top: 75px;
+    height: calc(100% - 54px);
+    top: 54px;
     background-color: #fff;
   }
 
@@ -4707,7 +4808,7 @@ footer {
     width: 35px;
     height: 35px;
     right: 12px;
-    bottom: 12px;
+    top: 16px;
   }
 
   .cart__like .svgsprite._heart-full {
@@ -4720,6 +4821,7 @@ footer {
     left: 12px;
     flex-wrap: wrap;
     width: calc(100% - 24px);
+    max-width: 100px;
   }
 
   .tag {
@@ -4949,7 +5051,7 @@ footer {
   }
 
   .product__like--desktop {
-    display: none !important;
+    display: none;
   }
 
   .product__like--mobile {
@@ -4957,6 +5059,30 @@ footer {
     z-index: 50;
     right: 25px;
     bottom: 18px;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+  }
+
+  .product__like--mobile:hover {
+    background-color: #F1F1F1;
+  }
+
+  .product__like--mobile:hover .svgsprite._heart-full {
+    fill: #D8D8D8;
+  }
+
+  .product__like--mobile.active {
+    background-color: #FFE2E8;
+  }
+
+  .product__like--mobile.active .svgsprite._heart-full {
+    fill: #F76785;
+  }
+
+  .product__like .svgsprite._heart-full {
+    width: 15px;
+    transform: translateY(1px);
   }
 
   .product-section {
@@ -5244,7 +5370,7 @@ footer {
 @media (max-width: 500px) {
   .cart__buttons {
     width: calc(100% - 20px);
-    bottom: 12px;
+    padding-bottom: 12px;
   }
 
   .cart__buttons .button {
@@ -5254,9 +5380,12 @@ footer {
     height: 40px;
   }
 
+  .cart__top {
+    margin-bottom: 10px;
+  }
+
   .cart__pic {
     height: 175px;
-    margin-bottom: 10px;
   }
 
   .product__btns {
